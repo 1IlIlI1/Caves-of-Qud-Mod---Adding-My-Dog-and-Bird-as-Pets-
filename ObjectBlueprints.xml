@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<objects>
+
+
+<!-- Charli Dog the Just Ok Dane -->
+  <object Name="CharliDogBase" Inherits="Creature">
+    <part Name="Body" Anatomy="CharliDogAnatomy" />
+    <part Name="Brain" Factions="Humanoids-100" Allied="Player" />
+    <intproperty Name="Bleeds" Value="1" />
+    <intproperty Name="HugeHands" Value="1" />       <!-- //In order to hold weapons with jaws, does not work on weapon -->
+    <tag Name="Species" Value="beast" />
+    <tag Name="Gender" Value="female" />
+    <tag Name="DeathSounds" Value="death_humanoid_1,death_humanoid_2,death_humanoid_3,death_humanoid_4" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="PrimaryLimbType" Value="Jaws" />
+  </object>
+
+  <object Name="CharliDog" Inherits="CharliDogBase">
+      <part Name="Render" DisplayName="{{forest|Charli Dog the Just Ok Dane}}" Tile="Creatures/CharliDog.png" ColorString="&amp;K" TileColor="K" DetailColor="w"/>
+      <part Name="AnimatedMaterialGeneric" AnimationLength="200" TileAnimationFrames="0=CharliDog1.png,10=CharliDog2.png,20=CharliDog3.png,30=CharliDog4.png,40=CharliDog5.png,50=CharliDog6.png,60=CharliDog7.png,70=CharliDog8.png,80=CharliDog9.png,90=CharliDog10.png,100=CharliDog11.png,110=CharliDog12.png,120=CharliDog13.png,130=CharliDog14.png,140=CharliDog15.png,150=CharliDog16.png,160=CharliDog17.png,170=CharliDog18.png,180=CharliDog19.png,190=CharliDog20.png,"/>
+      <part Name="Brain" Hostile="False"/>
+      <stat Name="Strength" Value="20" />
+      <stat Name="Agility" Value="21" />
+      <stat Name="Toughness" Value="22" />
+      <stat Name="Intelligence" Value="12" />
+      <stat Name="Willpower" Value="18" />
+      <stat Name="Ego" Value="14" />
+      <stat Name="MoveSpeed" Value="120" />
+      <stat Name="ColdResistance" Value="25" />
+      <mutation Name="HeightenedSmell" Level="6" />
+      <mutation Name="Stinger (Paralyzing Venom)" Level="5" />
+      <mutation Name="BurrowingClaws" Level="4" />
+      <mutation Name="DarkVision" Level="3" />
+      <mutation Name="HeightenedHearing" Level="3" />
+      <mutation Name="HeightenedSpeed" Level="2" />
+      <mutation Name="HeightenedStrength" Level="1" />
+      <part Name="Corpse" CorpseChance="100" CorpseBlueprint="CharliDogsCorpse" />
+      <skill Name="Acrobatics" />
+      <skill Name="Acrobatics_Dodge" />
+      <skill Name="Tactics" />
+      <skill Name="LongBlades" />
+      <skill Name="LongBladesLunge" />
+      <skill Name="ShortBlades" />
+      <skill Name="Discipline" />
+      <skill Name="Customs" />
+      <inventoryobject Blueprint="Puma Chitin Vest" Number="1" />
+      <inventoryobject Blueprint="HalfFullCanteen" Number="1" />
+      <inventoryobject Blueprint="Paw Protectors Hands" Number="1" />
+      <inventoryobject Blueprint="Paw Protectors Feet" Number="1" />
+      <property Name="Role" Value="Skirmisher" />
+      <part Name="Description" Short="Your faithful companion, Charli Dog the Just OK Dane. She's currently looking around, ears perked, attentive to any possible dangers that may approach you but more specifically for small animals to chase. Occasionally looking to you for any commands or attention you wish to give her." />
+      <part Name="Pettable" />
+      <part Name="Fetches" />
+      <part Name="SmartuseForceTwiddles" />
+      <tag Name="Species" Value="canine" />
+      <tag Name="Gender" Value="Female" />
+      <tag Name="StartingPet"/>
+      <tag Name="Noclone" />
+      <tag Name="PetResponse" Value="nuzzles into your hand, ears submissivly flattening as they enjoy the affection" />
+      <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit"/>
+  </object>
+
+  <object Name="CharliDogsCorpse" Inherits="Corpse">
+    <part Name="Render" DisplayName="{{forest|Charli Dog}}'s corpse" ColorString="&amp;R" />
+    <part Name="Description" Short="The lifeless corpse of your faithful companion...at least she died an honorable death in service to you." />
+    <tag Name="DynamicObjectsTable:Corpses" />
+  </object>
+
+  <object Name="CharliDog_Jaw" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="bite" />
+    <part Name="MeleeWeapon" PenBonus="2" MaxStrengthBonus="1000" BaseDamage="1d3" Skill="Axe" Stat="Strength" Slot="Face" />
+    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="UndesireableWeapon" />
+    <tag Name="NaturalGear" />
+    <tag Name="WeaponUnarmed" />
+    <tag Name="NeverStack" />
+  </object>
+
+  <object Name="CharliDog_Claw" Inherits="NaturalWeapon">
+    <part Name="Render" DisplayName="claw" />
+    <part Name="MeleeWeapon" PenBonus="2" MaxStrengthBonus="999" BaseDamage="2d3" Skill="ShortBlades" Stat="Agility" Slot="Foot" />
+    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="UndesireableWeapon" />
+    <tag Name="NaturalGear" />
+    <tag Name="WeaponUnarmed" />
+    <tag Name="NeverStack" />
+  </object>
+
+  
+  
+<!--   Wanna test and see what happens with two identical objects with different names and amror slots. -->
+  <object Name="Paw Protectors Hands" Inherents="Sandals">
+    <part Name="Armor" AV="2" DV="3" WornOn="Hands" />
+    <part Name="Render" Tile="items/sw_sandals.bmp" DetailColor="Y" DisplayName="sandals" RenderString="]" />
+    <part Name="Commerce" Value="25" />
+    <part Name="Description" Short="A pair of durable white leather formed into hybrid palm glove/sandals, allowing the paw to be protected yet still able to breath and be agile." />
+    <part Name="Physics" Weight="1" Category="Clothes" />
+    <intproperty Name="Inorganic" Value="0" />
+    <tag Name="Tier" Value="3" />
+  </object>
+
+  <object Name="Paw Protectors Feet" Inherents="Sandals">
+    <part Name="Armor" AV="2" DV="3" WornOn="Feet" />
+    <part Name="Render" Tile="items/sw_sandals.bmp" DetailColor="Y" DisplayName="sandals" RenderString="]" />
+    <part Name="Commerce" Value="25" />
+    <part Name="Description" Short="A pair of durable white leather formed into hybrid palm glove/sandals, allowing the paw to be protected yet still able to breath and be agile." />
+    <part Name="Physics" Weight="1" Category="Clothes" />
+    <intproperty Name="Inorganic" Value="0" />
+    <tag Name="Tier" Value="3" />
+  </object>
+
+  
+  
+  
+  
+  
+<!-- Chino Birb -->
+  <object Name="ChinoBirb" Inherits="BaseBird">
+    <part Name="Body" Anatomy="ChinoBirbAnatomy" />
+    <stat Name="Hitpoints" Value="29" />
+    <stat Name="Level" Value="4" />
+    <stat Name="AV" Value="3" />
+    <stat Name="DV" Value="2" />
+    <stat Name="Strength" sValue="14" />
+    <stat Name="Agility" sValue="20" />
+    <stat Name="Toughness" sValue="16" />
+    <stat Name="Intelligence" sValue="14" />
+    <stat Name="Willpower" sValue="18" />
+    <stat Name="Ego" sValue="20" />
+    <stat Name="MoveSpeed" Value="90" />
+    <part Name="Render" DisplayName="{{b|Chino Birb}}" RenderString="y" ColorString="&amp;y" />
+    <part Name="Corpse" CorpseChance="100" CorpseBlueprint="ChinoBirbCorpse" />
+    <part Name="Rummager" />
+    <part Name="Fetches" />
+    <skill Name="Acrobatics" />
+    <skill Name="Acrobatics_Dodge" />
+    <skill Name="Acrobatics_SwiftReflexes" />
+    <skill Name="Tactics" />
+    <skill Name="Tactics_Charge" />
+    <skill Name="Tactics_Run" />
+    <skill Name="Tactics_Hurdle" />
+    <skill Name="Customs_TrashDivining" />
+    <skill Name="Tinkering_Scavenger" />
+    <skill Name="CookingAndGathering_Harvestry" />
+    <skill Name="ShortBlades" />
+    <skill Name="ShortBlades_Expertise" />
+    <skill Name="Dual_Wield_Offhand_Strikes" />
+    <skill Name="Dual_Wield_Fussilade" />
+    <skill Name="Dual_Wield" />
+    <inventoryobject Blueprint="ChinoBirb_Tail_Armor" Number="1" />
+    <part Name="AISelfPreservation" Threshold="65" />
+    <mutation Name="MentalMirror" Level="2" />
+    <mutation Name="TemporalFugue" Level="2" />
+    <mutation Name="DarkVision" Level="15" />
+    <mutation Name="NightVision" Level="15" />
+    <tag Name="PrimaryLimbType" Value="Foot" />
+    <tag Name="Gender" Value="male" />
+    <property Name="Role" Value="Skirmisher" />
+    <tag Name="ExcludeFromDynamicEncounters" Value="*noinherit" />
+    <part Name="Description" Short="An extremely rare giant parakeet with sharp reflective feathers. =pronouns.Possessive= likes to scavange for items and store them in =pronouns.possessive= large dimensional storage within =pronouns.possessive= reality bending tail feathers. =pronouns.Possessive= tiny beak (comparitively speaking) is hooked." />
+    <tag Name="Species" Value="parrot" />
+    <tag Name="Noclone" />
+    <tag Name="Pet"/>
+    <tag Name="StartingPet"/>
+    <part Name="Pettable" />
+  </object>
+
+  <object Name="ChinoBirbCorpse" Inherits="Corpse">
+    <part Name="Render" DisplayName="{{y|silver null-falcon corpse}}" ColorString="&amp;m" />
+    <part Name="Description" Short="The remains of a rare dead silver null-falcon. Can be consumed to refresh cooldowns, gain mutation points, inflict a long term confusion, and inflict a long term(160 turn) poison that does 2d2 damage." />
+    <part Name="MutationPointsOnEat" />
+    <part Name="RefreshCooldownsOnEat" />
+    <part Name="ConfuseOnEat" Strength = "4d12" Duration = "6d4" Level="5" />
+    <part Name="PoisonOnEat" Duration="160" Damage="2d2" Strength="20" />
+    <part Name="Physics" Weight="60" />
+    <part Name="Commerce" Value="1000" />
+  </object>
+
+   <object Name="ChinoBirb_Beak" Inherits="Item">
+  	<part Name="Render" DisplayName="ChinoBirb's beak" />
+  	<part Name="Physics" IsReal="true" Solid="true" Takeable="false" Weight="0" Category="Natural Weapon" Conductivity="0" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
+    <part Name="MeleeWeapon" MaxStrengthBonus="999" BaseDamage="1d2" Skill="ShortBlades" Stat="Strength" Slot="Face" Attributes="Bite"/>
+    <part Name="DisarmOnHit" Chance="3" />
+    <part Name="Description" Short="The beak of the silver null-falcon can disarm per hit at 3% chance" />
+    <tag Name="NaturalGear" />
+    <part Name="NoBreak" />
+    <part Name="NoDamage" />
+    <part Name="ModSharp" />
+    <part Name="Commerce" Value="0" />
+    <intproperty Name="Natural" Value="1" />
+    <tag Name="VisibleAsDefaultBehavior" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="ShowMeleeWeaponStats" Value="true" />
+    <tag Name="TinkerCategory" Value="melee weapons" />
+    <removepart Name="TinkerItem" />
+    <tag Name="MeleeWeapon" Value="1" />
+    <tag Name="Tier" Value="4" />
+    <tag Name="WeaponUnarmed" />
+    <tag Name="ShowAsPhysicalFeature" />
+  </object>
+
+   <object Name="ChinoBirb_Claw" Inherits="Item">
+	<part Name="Render" DisplayName="ChinoBirb's claws" />
+	<part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" Conductivity="0" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
+    <part Name="MeleeWeapon" RenderString="\" MaxStrengthBonus="100" BaseDamage="1d3" Skill="ShortBlades" Slot="Foot" />
+    <part Name="BleedingOnHit" Amount="1d1" SaveTarget="20" Stack="true" />
+    <part Name="Description" Short="Causes bleeding at 1d1(save 20)" />
+    <tag Name="NaturalGear" />
+    <part Name="NoBreak" />
+    <part Name="NoDamage" />
+    <part Name="Commerce" Value="0" />
+    <intproperty Name="Natural" Value="1" />
+    <tag Name="VisibleAsDefaultBehavior" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="ShowMeleeWeaponStats" Value="true" />
+    <part Name="TinkerItem" Bits="00" CanDisassemble="false" CanBuild="false" />
+    <tag Name="TinkerCategory" Value="melee weapons" />
+    <tag Name="Tier" Value="4" />
+    <tag Name="MeleeWeapon" Value="1" />
+    <tag Name="WeaponUnarmed" />
+    <part Name="ModSharp"/>
+    <removepart Name="TinkerItem" />
+    <tag Name="ShowAsPhysicalFeature" />
+  </object>
+
+     <object Name="ChinoBirb_Tail_Armor" Inherits="Item">
+    <part Name="Armor" AV="2" DV="2" CarryBonus="42069" WornOn="Tail" />
+    <part Name="Render" DisplayName="Chino Birb's quantum space-time tail container" ColorString="&amp;w" DetailColor="w" />
+    <part Name="Description" Short="Within this tail exists an extradimensional rift burried through and between the sleek tail coverts. This giant parakeet uses this incredible threshhold to store the items she finds." />
+    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Conductivity="0" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" Category="Armor" />
+    <tag Name="NaturalGear" />
+    <part Name="NoBreak" />
+    <part Name="NoDamage" />
+    <part Name="Commerce" Value="0" />
+    <intproperty Name="Natural" Value="1" />
+    <tag Name="VisibleAsDefaultBehavior" />
+    <tag Name="NoSparkingQuest" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <part Name="Examiner" UnknownDisplayName = "Silver Null-Falcon Tail" />
+    <part Name="ModRefractive"/>
+    <part Name="ModFeathered"/>
+    <part Name="ModExtradimensional" />
+    <tag Name="TinkerCategory" Value="armor" />
+    <removepart Name="TinkerItem" />
+    <tag Name="ShowAsPhysicalFeature" />
+    </object>
+
+ </objects>
