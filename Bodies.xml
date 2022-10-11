@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<bodies Load="Merge">
+
+  <bodyparttypevariants>
+	  <bodyparttypevariant VariantOf="Hand" Type="Jaws" DefaultBehavior="Wolf_Jaw" />
+    <bodyparttypevariant VariantOf="Hand" Type="Wolf Foot" DefaultBehavior="Wolf_Claw" />
+    <bodyparttypevariant VariantOf="Arm" Type="Front Leg" LimbBlueprintProperty="SeveredLegBlueprint" Mobility="1" />
+    <bodyparttypevariant VariantOf="Arm" Type="Chino's Leg" LimbBlueprintProperty="SeveredLegBlueprint" Mobility="1" />
+    <bodyparttypevariant VariantOf="Hand" Type="Chino's Foot" DefaultBehavior="ChinoBirb_Claw" />
+  </bodyparttypevariants>
+
+
+  <anatomies>
+
+
+<!-- Charli Dog the Just Ok Dane Anatomy -->
+    <anatomy Name="CharliDogAnatomy">
+      <part Type="Body">
+        <part Type="Head">
+          <part Type="Face">
+      		  <part Type="Jaws"/>
+      <part Type="Back" />
+        <part Type="Front Leg" Laterality="Right">
+          <part Type="Hand" Laterality="Right" SupportsDependent="Wolf Foot" />
+        <part Type="Front Leg" Laterality="Left">
+          <part Type="Hand" Laterality="Left" SupportsDependent="Wolf Foot" />
+            <part Type="Wolf Foot" Laterality="Right Fore" SupportsDependent="Forefeet" />
+            <part Type="Wolf Foot" Laterality="Left Fore" SupportsDependent="Forefeet" />
+              <part Type="Feet" Laterality="Fore" DependsOn="Forefeet" Mobility="0" />
+                <!-- <part Type="Leg" Laterality="Left Fore" SupportsDependent="Forelegs" /> -->
+        <part Type="Leg" Laterality="Right Hind" SupportsDependent="Hindlegs" />
+        <part Type="Leg" Laterality="Left Hind" SupportsDependent="Hindlegs" />
+          <part Type="Foot" Laterality="Right Hind" SupportsDependent="Hindfeet" />
+          <part Type="Foot" Laterality="Left Hind" SupportsDependent="Hindfeet" />
+            <part Type="Feet" Laterality="Hind" DependsOn="Hindfeet" Mobility="0" />
+        <part Type="Tail" />
+    </anatomy>
+
+<!-- Chino's Anatomy -->
+  <anatomy Name="ChinoBirbAnatomy">
+    <part Type="Body" />
+      <part Type="Head">
+        <part Type="Face" DefaultBehavior="ChinoBirb_Beak" />
+    <part Type="Back" />
+      <part Type="Chino's Leg" Laterality="Right" SupportsDependent="Chino's Foot">
+        <part Type="Foot" Laterality="Right" DefaultBehavior="ChinoBirb_Claw" SupportsDependent="Feet" />
+      <part Type="Chino's Leg" Laterality="Left" SupportsDependent="Chino's Foot">
+        <part Type="Foot" Laterality="Left" DefaultBehavior="ChinoBirb_Claw" SupportsDependent="Feet" />
+      <part Type="Missile Weapon" Laterality="Right" />
+      <part Type="Missile Weapon" Laterality="Left" />
+      <part Type="Feet" DependsOn="Feet" />
+      <part Type="Tail" />
+  </anatomy>
+ </anatomies>
+
+</bodies>
