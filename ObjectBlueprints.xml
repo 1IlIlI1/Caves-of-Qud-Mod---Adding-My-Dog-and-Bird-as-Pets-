@@ -52,6 +52,7 @@
       <part Name="Description" Short="Your faithful companion, Charli Dog the Just OK Dane. She's currently looking around, ears perked, attentive to any possible dangers that may approach you but more specifically for small animals to chase. Occasionally looking to you for any commands or attention you wish to give her." />
       <part Name="Pettable" />
       <part Name="Fetches" />
+    	<part Name="Rummager" />
       <part Name="SmartuseForceTwiddles" />
       <tag Name="Species" Value="canine" />
       <tag Name="Gender" Value="Female" />
@@ -67,7 +68,7 @@
     <tag Name="DynamicObjectsTable:Corpses" />
   </object>
 
-  <object Name="CharliDog_Jaw" Inherits="NaturalWeapon">
+  <object Name="CharliDog's_Jaws" Inherits="NaturalWeapon">
     <part Name="Render" DisplayName="bite" />
     <part Name="MeleeWeapon" PenBonus="2" MaxStrengthBonus="1000" BaseDamage="1d3" Skill="Axe" Stat="Strength" Slot="Face" />
     <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" />
@@ -78,7 +79,7 @@
     <tag Name="NeverStack" />
   </object>
 
-  <object Name="CharliDog_Claw" Inherits="NaturalWeapon">
+  <object Name="CharliDog's_Claws" Inherits="NaturalWeapon">
     <part Name="Render" DisplayName="claw" />
     <part Name="MeleeWeapon" PenBonus="2" MaxStrengthBonus="999" BaseDamage="2d3" Skill="ShortBlades" Stat="Agility" Slot="Foot" />
     <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" />
