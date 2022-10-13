@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <bodies Load="Merge">
-
+<!-- Necessary Body Parts -->
   <bodyparttypevariants>
     <bodyparttypevariant VariantOf="Hand" Type="Charli's Jaws" DefaultBehavior="Charli's_Jaws" />
     <bodyparttypevariant VariantOf="Hand" Type="Charli's Foot" DefaultBehavior="Charli's_Claws" />
@@ -10,9 +8,8 @@
     <bodyparttypevariant VariantOf="Arm" Type="Chino's Leg" LimbBlueprintProperty="SeveredLegBlueprint" Mobility="1" />
     <bodyparttypevariant VariantOf="Hand" Type="Chino's Foot" DefaultBehavior="ChinoBirb_Claw" />
   </bodyparttypevariants>
-  
+<!-- CharliDog's Anatomy -->
   <anatomies>
-
     <anatomy Name="CharliDogAnatomy">
       <part Type="Head">
         <part Type="Face">
@@ -26,11 +23,7 @@
       <part Type="Feet" Laterality="Hind" DependsOn="Hindfeet" Mobility="0" />
       <part Type="Tail" />
     </anatomy>
-
-
-
-
-<!-- Chino's Anatomy -->
+<!-- ChinoBirb's Anatomy -->
     <anatomy Name="ChinoBirbAnatomy">
       <part Type="Body" />
         <part Type="Head">
@@ -44,7 +37,6 @@
         <part Type="Missile Weapon" Laterality="Left" />
         <part Type="Feet" DependsOn="Feet" />
         <part Type="Tail" />
-    </anatomy>
- </anatomies>
-
+      </anatomy>
+   </anatomies>
 </bodies>
