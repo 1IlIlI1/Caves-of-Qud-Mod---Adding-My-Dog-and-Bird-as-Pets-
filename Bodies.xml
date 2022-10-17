@@ -4,10 +4,10 @@
 
   <bodyparttypevariants>
 		<bodyparttypevariant VariantOf="Hand" Type="Jaws" DefaultBehavior="CharliDog's_Jaws" />
-    <bodyparttypevariant VariantOf="Hand" Type="Charli's Foot" DefaultBehavior="CharliDog's_Claws" />
-    <bodyparttypevariant VariantOf="Arm" Type="Front Leg" LimbBlueprintProperty="SeveredLegBlueprint" Mobility="1" />
-    <bodyparttypevariant VariantOf="Arm" Type="Chino's Leg" LimbBlueprintProperty="SeveredLegBlueprint" Mobility="1" />
-    <bodyparttypevariant VariantOf="Hand" Type="Chino's Foot" DefaultBehavior="ChinoBirb_Claw" />
+		<bodyparttypevariant VariantOf="Hand" Type="Charli's Foot" DefaultBehavior="CharliDog's_Claws" />
+		<bodyparttypevariant VariantOf="Arm" Type="Front Leg" LimbBlueprintProperty="SeveredLegBlueprint" Mobility="1" />
+		<bodyparttypevariant VariantOf="Arm" Type="Chino's Leg" LimbBlueprintProperty="SeveredLegBlueprint" Mobility="1" />
+		<bodyparttypevariant VariantOf="Hand" Type="Chino's Foot" DefaultBehavior="ChinoBirb_Claw" />
   </bodyparttypevariants>
 
   <anatomies>
