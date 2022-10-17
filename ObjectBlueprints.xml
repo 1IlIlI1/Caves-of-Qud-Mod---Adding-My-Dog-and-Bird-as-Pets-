@@ -18,7 +18,8 @@
 
   <object Name="CharliDog" Inherits="CharliDogBase">
       <part Name="Render" DisplayName="{{forest|Charli Dog the Just Ok Dane}}" Tile="Creatures/CharliDog.png" ColorString="&amp;K" TileColor="K" DetailColor="w"/>
-      <part Name="AnimatedMaterialGeneric" AnimationLength="200" TileAnimationFrames="0=CharliDog1.png,10=CharliDog2.png,20=CharliDog3.png,30=CharliDog4.png,40=CharliDog5.png,50=CharliDog6.png,60=CharliDog7.png,70=CharliDog8.png,80=CharliDog9.png,90=CharliDog10.png,100=CharliDog11.png,110=CharliDog12.png,120=CharliDog13.png,130=CharliDog14.png,140=CharliDog15.png,150=CharliDog16.png,160=CharliDog17.png,170=CharliDog18.png,180=CharliDog19.png,190=CharliDog20.png,"/>
+      <part Name="AnimatedMaterialGeneric" AnimationLength="200" TileAnimationFrames="0=CharliDog1.png,10=CharliDog2.png,20=CharliDog3.png,30=CharliDog4.png,40=CharliDog5.png,50=CharliDog6.png,60=CharliDog7.png,70=CharliDog8.png,80=CharliDog9.png,90=CharliDog10.png,100=CharliDog11.png,110=CharliDog12.png,120=CharliDog13.png,130=CharliDog14.png,140=CharliDog15.png,150=CharliDog16.png,160=CharliDog17.png,170=CharliDog18.png,180=CharliDog19.png,190=CharliDog20.png,"/> 
+<!-- 	^^^	I HIGHLY DOUBT THIS WILL WORK BUT ^^^ I WANT IT TO SO BAD =( -->
       <part Name="Brain" Hostile="False"/>
       <stat Name="Strength" Value="20" />
       <stat Name="Agility" Value="21" />
@@ -52,7 +53,7 @@
       <part Name="Description" Short="Your faithful companion, Charli Dog the Just OK Dane. She's currently looking around, ears perked, attentive to any possible dangers that may approach you but more specifically for small animals to chase. Occasionally looking to you for any commands or attention you wish to give her." />
       <part Name="Pettable" />
       <part Name="Fetches" />
-    	<part Name="Rummager" />
+      <part Name="Rummager" />
       <part Name="SmartuseForceTwiddles" />
       <tag Name="Species" Value="canine" />
       <tag Name="Gender" Value="Female" />
@@ -90,22 +91,20 @@
     <tag Name="NeverStack" />
   </object>
 
-  
-  
+
 <!--   Wanna test and see what happens with two identical objects with different names and amror slots. -->
   <object Name="Paw Protectors Hands" Inherents="Sandals">
     <part Name="Armor" AV="2" DV="3" WornOn="Hands" />
-    <part Name="Render" Tile="items/sw_sandals.bmp" DetailColor="Y" DisplayName="sandals" RenderString="]" />
+    <part Name="Render" Tile="items/sw_sandals.bmp" DetailColor="Y" DisplayName="Paw Protectors" RenderString="]" />
     <part Name="Commerce" Value="25" />
     <part Name="Description" Short="A pair of durable white leather formed into hybrid palm glove/sandals, allowing the paw to be protected yet still able to breath and be agile." />
     <part Name="Physics" Weight="1" Category="Clothes" />
     <intproperty Name="Inorganic" Value="0" />
     <tag Name="Tier" Value="3" />
   </object>
-
   <object Name="Paw Protectors Feet" Inherents="Sandals">
     <part Name="Armor" AV="2" DV="3" WornOn="Feet" />
-    <part Name="Render" Tile="items/sw_sandals.bmp" DetailColor="Y" DisplayName="sandals" RenderString="]" />
+    <part Name="Render" Tile="items/sw_sandals.bmp" DetailColor="Y" DisplayName="Paw Protectors" RenderString="]" />
     <part Name="Commerce" Value="25" />
     <part Name="Description" Short="A pair of durable white leather formed into hybrid palm glove/sandals, allowing the paw to be protected yet still able to breath and be agile." />
     <part Name="Physics" Weight="1" Category="Clothes" />
@@ -113,11 +112,8 @@
     <tag Name="Tier" Value="3" />
   </object>
 
-  
-  
-  
-  
-  
+	
+	
 <!-- Chino Birb -->
   <object Name="ChinoBirb" Inherits="BaseBird">
     <part Name="Body" Anatomy="ChinoBirbAnatomy" />
@@ -136,6 +132,7 @@
     <part Name="Corpse" CorpseChance="100" CorpseBlueprint="ChinoBirbCorpse" />
     <part Name="Rummager" />
     <part Name="Fetches" />
+    <part Name="SmartuseForceTwiddles" />
     <skill Name="Acrobatics" />
     <skill Name="Acrobatics_Dodge" />
     <skill Name="Acrobatics_SwiftReflexes" />
@@ -205,8 +202,8 @@
   </object>
 
    <object Name="ChinoBirb_Claw" Inherits="Item">
-	<part Name="Render" DisplayName="ChinoBirb's claws" />
-	<part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" Conductivity="0" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
+		<part Name="Render" DisplayName="ChinoBirb's claws" />
+		<part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" Conductivity="0" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
     <part Name="MeleeWeapon" RenderString="\" MaxStrengthBonus="100" BaseDamage="1d3" Skill="ShortBlades" Slot="Foot" />
     <part Name="BleedingOnHit" Amount="1d1" SaveTarget="20" Stack="true" />
     <part Name="Description" Short="Causes bleeding at 1d1(save 20)" />
@@ -229,26 +226,26 @@
     <tag Name="ShowAsPhysicalFeature" />
   </object>
 
-     <object Name="ChinoBirb_Tail_Armor" Inherits="Item">
-    <part Name="Armor" AV="2" DV="2" CarryBonus="42069" WornOn="Tail" />
-    <part Name="Render" DisplayName="Chino Birb's quantum space-time tail container" ColorString="&amp;w" DetailColor="w" />
-    <part Name="Description" Short="Within this tail exists an extradimensional rift burried through and between the sleek tail coverts. This giant parakeet uses this incredible threshhold to store the items she finds." />
-    <part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Conductivity="0" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" Category="Armor" />
-    <tag Name="NaturalGear" />
-    <part Name="NoBreak" />
-    <part Name="NoDamage" />
-    <part Name="Commerce" Value="0" />
-    <intproperty Name="Natural" Value="1" />
-    <tag Name="VisibleAsDefaultBehavior" />
-    <tag Name="NoSparkingQuest" />
-    <tag Name="ExcludeFromDynamicEncounters" />
-    <part Name="Examiner" UnknownDisplayName = "Silver Null-Falcon Tail" />
-    <part Name="ModRefractive"/>
-    <part Name="ModFeathered"/>
-    <part Name="ModExtradimensional" />
-    <tag Name="TinkerCategory" Value="armor" />
-    <removepart Name="TinkerItem" />
-    <tag Name="ShowAsPhysicalFeature" />
-    </object>
+		<object Name="ChinoBirb_Tail_Armor" Inherits="Item">
+			<part Name="Armor" AV="2" DV="2" CarryBonus="42069" WornOn="Tail" />
+			<part Name="Render" DisplayName="Chino Birb's quantum space-time tail container" ColorString="&amp;w" DetailColor="w" />
+			<part Name="Description" Short="Within this tail exists an extradimensional rift burried through and between the sleek tail coverts. This giant parakeet uses this incredible threshhold to store the items she finds." />
+			<part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Conductivity="0" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" Category="Armor" />
+			<tag Name="NaturalGear" />
+			<part Name="NoBreak" />
+			<part Name="NoDamage" />
+			<part Name="Commerce" Value="0" />
+			<intproperty Name="Natural" Value="1" />
+			<tag Name="VisibleAsDefaultBehavior" />
+			<tag Name="NoSparkingQuest" />
+			<tag Name="ExcludeFromDynamicEncounters" />
+			<part Name="Examiner" UnknownDisplayName = "Silver Null-Falcon Tail" />
+			<part Name="ModRefractive"/>
+			<part Name="ModFeathered"/>
+			<part Name="ModExtradimensional" />
+			<tag Name="TinkerCategory" Value="armor" />
+			<removepart Name="TinkerItem" />
+			<tag Name="ShowAsPhysicalFeature" />
+		</object>
 
  </objects>
