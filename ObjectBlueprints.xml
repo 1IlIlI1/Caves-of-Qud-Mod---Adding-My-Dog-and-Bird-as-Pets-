@@ -176,7 +176,7 @@
 		<tag Name="ShowAsPhysicalFeature" />
   	</object>
 
-   	<object Name="ChinoBirb_Claw" Inherits="Item">
+	<object Name="ChinoBirb_Claw" Inherits="Item">
 		<part Name="Render" DisplayName="ChinoBirb's claws" />
 		<part Name="Physics" IsReal="false" Solid="false" Takeable="false" Weight="0" Category="Natural Weapon" Conductivity="0" FreezeTemperature="-99999" BrittleTemperature="-99999" FlameTemperature="99999" VaporTemperature="99999" />
 		<part Name="MeleeWeapon" RenderString="\" MaxStrengthBonus="100" BaseDamage="1d3" Skill="ShortBlades" Slot="Foot" />
@@ -199,9 +199,9 @@
 		<part Name="ModSharp"/>
 		<removepart Name="TinkerItem" />
 		<tag Name="ShowAsPhysicalFeature" />
- 	 </object>
+	</object>
 
-     <object Name="ChinoBirb_Tail_Armor" Inherits="Item">
+	<object Name="ChinoBirb_Tail_Armor" Inherits="Item">
 		<part Name="Armor" AV="2" DV="2" CarryBonus="42069" WornOn="Tail" />
 		<part Name="Render" DisplayName="Chino Birb's quantum space-time tail container" ColorString="&amp;w" DetailColor="w" />
 		<part Name="Description" Short="Within this tail exists an extradimensional rift burried through and between the sleek tail coverts. This giant parakeet uses this incredible threshhold to store the items she finds." />
