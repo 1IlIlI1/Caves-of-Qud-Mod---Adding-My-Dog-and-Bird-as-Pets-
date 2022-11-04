@@ -8,3 +8,5 @@ EDIT.  Yea... Needs more finish and tests.
 
 10/17/2022
 OK, so whatever qud beta did to error detection is nuts, cuz i used to be able to get away with having a loose object or whatever here and there but for whatever reason (and it's a good thing really) NOTHING IS GETTING BY now.  So yea.  Hopefully fixed up the code so the stupid game will load and also, excited to see if the animated tiles thing works, and I need to figure out how to make an arm go into a foot.  or maybe make a foot that is a fake-hand?  I dunno.  It's cool.
+11/4/2022
+Had to nuke tons of stuff.  Something went wrong and Charli lost a brain and would not be a pet.  Should be fixed now.  Stupid game.
