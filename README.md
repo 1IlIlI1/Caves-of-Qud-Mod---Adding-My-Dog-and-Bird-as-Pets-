@@ -12,3 +12,7 @@ OK, so whatever qud beta did to error detection is nuts, cuz i used to be able t
 11/4/2022  
 
 Had to nuke tons of stuff.  Something went wrong and Charli lost a brain and would not be a pet.  Should be fixed now.  Stupid game.
+
+11.17.2022
+
+Added a "petping.cs" that basically hi-jacks the chrome pyramid time dilation but applies it to the pet every 3 minutes or so, so that way I know where the damn things are.  messing with unity's particle effects on the pets too cuz why not?
